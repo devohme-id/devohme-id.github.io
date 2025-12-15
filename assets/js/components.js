@@ -17,11 +17,7 @@ export function renderNavbar(activePage = 'home') {
                         <a href="${baseUrl}#about" class="nav-link text-slate-600 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400 transition-colors px-3 py-2 rounded-md text-sm font-medium">About</a>
                         <a href="${baseUrl}#experience" class="nav-link text-slate-600 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400 transition-colors px-3 py-2 rounded-md text-sm font-medium">Experience</a>
                         <a href="${baseUrl}#skills" class="nav-link text-slate-600 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400 transition-colors px-3 py-2 rounded-md text-sm font-medium">Skills</a>
-                        <a href="projects.html" class="${
-                          activePage === 'projects'
-                            ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-slate-800'
-                            : 'text-slate-600 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400'
-                        } transition-colors px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                        <a href="${baseUrl}#showcase" class="nav-link text-slate-600 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400 transition-colors px-3 py-2 rounded-md text-sm font-medium">Projects</a>
                         <a href="${baseUrl}#achievements" class="nav-link text-slate-600 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400 transition-colors px-3 py-2 rounded-md text-sm font-medium">Achievements</a>
                         <a href="${baseUrl}#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-all">Contact Me</a>
 
@@ -57,7 +53,7 @@ export function renderNavbar(activePage = 'home') {
                 <a href="${baseUrl}#about" class="mobile-link text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-slate-900 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
                 <a href="${baseUrl}#experience" class="mobile-link text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-slate-900 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium">Experience</a>
                 <a href="${baseUrl}#skills" class="mobile-link text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-slate-900 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium">Skills</a>
-                <a href="projects.html" class="mobile-link text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-slate-900 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+                <a href="${baseUrl}#showcase" class="mobile-link text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-slate-900 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
                 <a href="${baseUrl}#achievements" class="mobile-link text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-slate-900 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium">Achievements</a>
                 <a href="${baseUrl}#contact" class="mobile-link bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium mt-4">Contact Me</a>
             </div>
