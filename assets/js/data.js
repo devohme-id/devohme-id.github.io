@@ -18,7 +18,7 @@ export const profile = {
 export const experiences = [
   {
     company: 'PT. OHM Electronics Indonesia',
-    role: 'IT Network, Infrastructure & Software Developer',
+    role: 'Systems Engineer',
     period: 'Oktober 2020 – Present',
     description:
       'Bertanggung jawab penuh atas desain infrastruktur IT, pengembangan software manufaktur, dan automasi sistem produksi.',
