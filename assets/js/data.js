@@ -85,6 +85,33 @@ export const achievements = [
   },
 ]
 
+export const showcase = [
+  {
+    title: 'Enterprise Resource Planning (ERP)',
+    subtitle: 'Integrated Business Management Suite',
+    description:
+      'Sebuah sistem terpusat yang mengintegrasikan seluruh proses bisnis inti perusahaan mulai dari Finance, Procurement, Inventory, Production, hingga HR. Dirancang untuk skalabilitas tinggi dan real-time decision making.',
+    image: 'assets/img/showcase_erp.png',
+    tags: ['Desktop & Web Ecosystem', 'Finance & Accounting', 'Supply Chain', 'Full Automation'],
+  },
+  {
+    title: 'Ekosistem Integrasi Bea Cukai',
+    subtitle: 'ERP + IT Inventory + CEISA 4.0 Host-to-Host',
+    description:
+      'Solusi kepatuhan Bea Cukai (Kawasan Berikat) yang menghubungkan data ERP pabrik secara langsung dengan portal CEISA 4.0. Menjamin data realtime, akurat, dan sesuai regulasi tanpa input manual ganda.',
+    image: 'assets/img/showcase_bea_cukai.png',
+    tags: ['Government Compliance', 'Host-to-Host API', 'Automated Reporting', 'Zero-Error Data'],
+  },
+  {
+    title: 'Warehouse Management System (WMS)',
+    subtitle: 'Automotive Industry Standard (PT. TVS)',
+    description:
+      'Sistem manajemen gudang canggih untuk industri otomotif dengan fitur First-In-First-Out (FIFO), serial number tracking, dan optimasi layout gudang. Meningkatkan akurasi stok hingga 99.9% dan efisiensi picking.',
+    image: 'assets/img/showcase_wms.png',
+    tags: ['Automotive Standard', 'FIFO Logic', 'Mobile Scanning', 'Stock Accuracy >99%'],
+  },
+]
+
 export const projects = [
   {
     no: 1,

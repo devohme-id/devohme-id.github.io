@@ -248,15 +248,38 @@
                 </li>
               </ul>
             </div>
-          </div>
-        </div>
       </div>
+    </section>
+
+    <!-- Project Showcase Section -->
+    <section id="showcase" class="py-24 bg-slate-50 dark:bg-slate-900 transition-colors duration-300 relative overflow-hidden">
+        <!-- Decoration -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-white">Featured Projects</h2>
+                <p class="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">High-impact solutions delivering real business value in manufacturing and compliance.</p>
+            </div>
+
+            <div class="space-y-20" id="showcase-container">
+                <!-- Injected via JS -->
+            </div>
+
+            <div class="mt-16 text-center">
+                <a href="projects.html" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-all">
+                    View All Developed Systems
+                    <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+        </div>
     </section>
 
     <!-- Experience Section -->
     <section
       id="experience"
-      class="py-24 relative bg-slate-50 dark:bg-slate-900 transition-colors duration-300"
+      class="py-24 relative bg-white dark:bg-slate-800/50 transition-colors duration-300"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-slate-900 dark:text-white">
@@ -389,7 +412,7 @@
 
     <!-- Application Script -->
     <script type="module">
-      import { profile, experiences, skills, achievements } from './assets/js/data.js'
+      import { profile, experiences, skills, achievements, showcase } from './assets/js/data.js'
       import { renderNavbar, renderFooter } from './assets/js/components.js'
       import {
         initTheme,
@@ -421,6 +444,39 @@
         document.getElementById('profile-tagline').textContent = profile.tagline
         document.getElementById('profile-summary').textContent = profile.summary
         document.getElementById('profile-sub-summary').textContent = profile.sub_summary
+
+        // Render Showcase
+        const showcaseContainer = document.getElementById('showcase-container')
+        showcase.forEach((item, index) => {
+             const isReverse = index % 2 !== 0;
+             const html = `
+                <div class="flex flex-col lg:flex-row ${isReverse ? 'lg:flex-row-reverse' : ''} items-center gap-12">
+                    <div class="w-full lg:w-1/2">
+                        <div class="relative group rounded-2xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800">
+                             <div class="absolute inset-0 bg-blue-600/10 group-hover:bg-transparent transition-all duration-500 z-10"></div>
+                             <img src="${item.image}" alt="${item.title}" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-sm font-medium mb-4">
+                            ${item.subtitle}
+                        </div>
+                        <h3 class="text-3xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">${item.title}</h3>
+                        <p class="text-lg text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
+                            ${item.description}
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                             ${item.tags.map(tag => `
+                                <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-sm rounded-md font-medium border border-slate-200 dark:border-white/10">
+                                    ${tag}
+                                </span>
+                             `).join('')}
+                        </div>
+                    </div>
+                </div>
+             `;
+             showcaseContainer.insertAdjacentHTML('beforeend', html);
+        });
 
         // Age Calculation
         const age = new Date().getFullYear() - new Date(profile.birth_date).getFullYear()
