@@ -1,6 +1,6 @@
 export const profile = {
   name: 'Roby Kornela',
-  title: 'IT Network & Infrastructure Specialist | Software Developer',
+  title: 'Systems Engineer',
   tagline:
     'Transforming complex manufacturing challenges into streamlined, automated, and scalable IT solutions.',
   summary:
